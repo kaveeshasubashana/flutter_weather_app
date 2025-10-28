@@ -16,7 +16,7 @@ It also includes beautiful weather icons and supports live API updates.
 
 📱 Clean, responsive Flutter UI
 
-Tech Stack:
+## Tech Stack:
 
 Flutter & Dart
 
