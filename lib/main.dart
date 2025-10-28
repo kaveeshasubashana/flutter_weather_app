@@ -49,48 +49,53 @@ class _MyAppState extends State<MyApp> {
        child: CircularProgressIndicator(),
       );
     }
-    return SizedBox(width: MediaQuery.sizeOf(context).width,
-                    height: MediaQuery.sizeOf(context).height,
-                    child: Column(
-                      mainAxisSize: MainAxisSize.max,
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      crossAxisAlignment: CrossAxisAlignment.center,
+    return SingleChildScrollView(
+      child: SizedBox(
                       
-                      children: [
-
-                        //location
-                        _locationHeader(),
-
-                        SizedBox(
-                          height: MediaQuery.sizeOf(context).height * 0.08,
-                        ),
-
-                          //date and time 
-                          _dateTimeInfor(),
-
-                         SizedBox(
-                          height: MediaQuery.sizeOf(context).height * 0.05,
-                        ),
-
-
-                        //whethericon
-                        _wetherIcon(),
-
-                        SizedBox(height: MediaQuery.sizeOf(context).height * 0.02,),
-
-
-                        //current temp
-                        _currentTemp(),
-
-                        SizedBox(height: MediaQuery.sizeOf(context).height * 0.02,),
+                      child: Column(
+                        mainAxisSize: MainAxisSize.max,
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        crossAxisAlignment: CrossAxisAlignment.center,
                         
-
-
-
-
-
-                      ],
-                    ),);
+                        children: [
+      
+                          //location
+                          _locationHeader(),
+      
+                          SizedBox(
+                            height: MediaQuery.sizeOf(context).height * 0.08,
+                          ),
+      
+                            //date and time 
+                            _dateTimeInfor(),
+      
+                           SizedBox(
+                            height: MediaQuery.sizeOf(context).height * 0.05,
+                          ),
+      
+      
+                          //whethericon
+                          _wetherIcon(),
+      
+                          SizedBox(height: MediaQuery.sizeOf(context).height * 0.02,),
+      
+      
+                          //current temp
+                          _currentTemp(),
+      
+                          SizedBox(height: MediaQuery.sizeOf(context).height * 0.02,),
+      
+                          //more information
+                          _extrainfo(),
+      
+      
+      
+      
+      
+      
+                        ],
+                      ),),
+    );
   }
 
 
@@ -156,5 +161,54 @@ class _MyAppState extends State<MyApp> {
   }
 
 
+  //more information
+   Widget _extrainfo(){
+
+        return Container(
+
+            width: MediaQuery.sizeOf(context).width * 0.80,
+            height: MediaQuery.sizeOf(context).height * 0.15,
+
+            decoration: BoxDecoration(
+              color: Colors.purpleAccent,
+              borderRadius: BorderRadius.circular(20)
+            ),
+
+            padding: const EdgeInsets.all(8.0),
+
+            child: Column(
+
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                //row1
+                Row(
+
+                  mainAxisSize: MainAxisSize.max,
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                        Text("Max: ${_weather?.tempMax?.celsius?.toStringAsFixed(0)}° C", style: const TextStyle( color: Colors.white,fontSize: 15,),),
+                        Text("Min: ${_weather?.tempMin?.celsius?.toStringAsFixed(0)}° C", style: const TextStyle( color: Colors.white,fontSize: 15,),),
+                    ],
+                ),
+
+                //row2
+                Row(
+
+                  mainAxisSize: MainAxisSize.max,
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                        Text("Wind: ${_weather?.windSpeed?.toStringAsFixed(0)} m/s", style: const TextStyle( color: Colors.white,fontSize: 15,),),
+                        Text("Humidity: ${_weather?.humidity?.toStringAsFixed(0)} %", style: const TextStyle( color: Colors.white,fontSize: 15,),),
+                    ],
+                ),
+
+
+              ],
+            ),
+        );
+  }
 
 }
