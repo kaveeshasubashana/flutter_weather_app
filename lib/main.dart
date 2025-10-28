@@ -22,7 +22,7 @@ class _MyAppState extends State<MyApp> {
   @override
   void initState() {
     super.initState();
-    _fetchWeather("London"); // default city
+    _fetchWeather("Colombo"); // default city
   }
 
   // Fetch weather for a given city
@@ -54,7 +54,9 @@ class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       home: Scaffold(
+        backgroundColor: Colors.cyanAccent,
         body: _weather == null
             ? const Center(child: CircularProgressIndicator())
             : SingleChildScrollView(
@@ -68,9 +70,9 @@ class _MyAppState extends State<MyApp> {
                       _cityInput(),
                       const SizedBox(height: 20),
                       _locationHeader(),
-                      const SizedBox(height: 30),
+                      const SizedBox(height: 20),
                       _dateTimeInfo(),
-                      const SizedBox(height: 30),
+                      const SizedBox(height: 20),
                       _weatherIcon(),
                       const SizedBox(height: 20),
                       _currentTemp(),
