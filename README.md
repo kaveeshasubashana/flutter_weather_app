@@ -23,3 +23,8 @@ Flutter & Dart
 OpenWeatherMap API
 
 weather and intl packages
+
+
+## 📷 preview
+
+<img width="454" height="945" alt="image" src="https://github.com/user-attachments/assets/208aa710-34f3-44be-a0ca-bdb9476edd55" />
