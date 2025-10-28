@@ -1,16 +1,25 @@
-# flutter_weather_app
+Flutter Weather App 🌤️
+A simple and elegant Flutter application that displays real-time weather information using the OpenWeatherMap API.
 
-A new Flutter project.
+The app shows the current temperature, location, weather condition, date, and time.
+It also includes beautiful weather icons and supports live API updates.
 
-## Getting Started
+Features:
 
-This project is a starting point for a Flutter application.
+🌍 Fetches real-time weather data by city name
 
-A few resources to get you started if this is your first Flutter project:
+🕒 Displays current date and time
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+🌡️ Shows temperature in Celsius (°C)
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+☁️ Weather icons from OpenWeatherMap
+
+📱 Clean, responsive Flutter UI
+
+Tech Stack:
+
+Flutter & Dart
+
+OpenWeatherMap API
+
+weather and intl packages
