@@ -69,21 +69,38 @@ class _MyAppState extends State<MyApp> {
                           _dateTimeInfor(),
 
                          SizedBox(
-                          height: MediaQuery.sizeOf(context).height * 0.08,
+                          height: MediaQuery.sizeOf(context).height * 0.05,
                         ),
 
 
                         //whethericon
                         _wetherIcon(),
+
+                        SizedBox(height: MediaQuery.sizeOf(context).height * 0.02,),
+
+
+                        //current temp
+                        _currentTemp(),
+
+                        SizedBox(height: MediaQuery.sizeOf(context).height * 0.02,),
+                        
+
+
+
+
+
                       ],
                     ),);
   }
 
 
+  //header
   Widget _locationHeader(){
     return Text(_weather?.areaName ?? "",style: TextStyle(color:Colors.black,fontSize: 40),);
   }
   
+
+  //date and time info
   Widget _dateTimeInfor(){
        DateTime now = _weather!.date!;
 
@@ -111,7 +128,7 @@ class _MyAppState extends State<MyApp> {
   }
 
 
-
+  //wetaher icon
   Widget _wetherIcon(){
     return Column(
 
@@ -131,4 +148,13 @@ class _MyAppState extends State<MyApp> {
         ],
     );
   }
+
+
+  //current temp
+  Widget _currentTemp(){
+    return Text("${_weather?.temperature?.celsius?.toStringAsFixed(0)}° C", style: TextStyle(fontSize: 90, fontWeight: FontWeight.w500,color: Colors.black),);
+  }
+
+
+
 }
