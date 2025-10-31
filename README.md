@@ -1,31 +1,67 @@
-# Flutter Weather App 🌤️
-A simple and elegant Flutter application that displays real-time weather information using the OpenWeatherMap API.
+# Daily Weather App 🌤️
 
-The app shows the current temperature, location, weather condition, date, and time.
-It also includes beautiful weather icons and supports live API updates.
+A Flutter mobile application that provides real-time weather information for any city. Users can search for their city and instantly see the temperature, humidity, wind speed, and max/min temperature in Celsius.
 
-## Features:
+---
 
-🌍 Fetches real-time weather data by city name
+## Features
 
-🕒 Displays current date and time
+- **Search City:** Look up weather information for any city worldwide.
+- **Current Temperature:** Displays the temperature in Celsius.
+- **Weather Details:** Includes max/min temperature, humidity, and wind speed.
+- **Date & Time:** Shows current local time and date for the selected city.
+- **Weather Icon:** Displays weather condition icons for visual representation.
+- **User-Friendly UI:** Simple and intuitive interface with smooth navigation.
 
-🌡️ Shows temperature in Celsius (°C)
+---
 
-☁️ Weather icons from OpenWeatherMap
+## Screenshots
 
-📱 Clean, responsive Flutter UI
+<img width="300" height="600" alt="image" src="https://github.com/user-attachments/assets/1bbd0c0d-b397-4b8a-a076-d9799e7642d0" />
 
-## Tech Stack:
 
-Flutter & Dart
+*Weather Screen Example:*  
+<img width="300" height="600" alt="image" src="https://github.com/user-attachments/assets/338bbe99-a1b7-4a4f-a48a-7c0674359d2f" />
+
+
+---
+
+## Getting Started
+
+### Prerequisites
+
+- Flutter SDK installed
+- Android Studio / VS Code with Flutter plugins
+- OpenWeatherMap API Key
+
+### Installation
+
+## 1. Clone the repository:
+   ```bash
+   git clone https://github.com/yourusername/daily-weather-app.git
+   ```
+## 2.Navigate into the project directory:
+```bash
+cd daily-weather-app
+```
+## 3.Install dependencies:
+```bash
+flutter pub get
+```
+## 4.Add your OpenWeatherMap API key in consts.dart
+create a const.dart file in lib folder
+add you api key
+```bash
+const String OpenWhetherApiKey = "YOUR_API_KEY_HERE";
+```
+## 5. Run the app:
+
+# Technologies Used
+
+Flutter
+
+Dart
 
 OpenWeatherMap API
 
-weather and intl packages
-
-
-## 📷 preview
-
-<img width="300" height="700" alt="image" src="https://github.com/user-attachments/assets/7300e337-f5c8-4228-ad88-7c75fb9a0ed1" />
-
+Intl Package
