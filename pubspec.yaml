@@ -48,6 +48,9 @@ flutter_launcher_icons:
   ios: true
   image_path: "assets/playstore.png"
   image_path_ios: "assets/appstore.png"
+ 
+  
+  
 
   # The "flutter_lints" package below contains a set of recommended lints to
   # encourage good coding practices. The lint set provided by the package is
