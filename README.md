@@ -50,7 +50,7 @@ flutter pub get
 ```
 ## 4.Add your OpenWeatherMap API key in consts.dart
 create a const.dart file in lib folder
-add you api key
+add your api key
 ```bash
 const String OpenWhetherApiKey = "YOUR_API_KEY_HERE";
 ```
